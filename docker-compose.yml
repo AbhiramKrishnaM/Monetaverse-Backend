@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  monetaverse-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+
+    ports: 
+      - "6987:6987"
+
+    volumes:
+      - /app/node_modules
+      - .:/app  
